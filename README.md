@@ -208,5 +208,8 @@ Here are some screenshots of the application:
 ### Screenshot 5
 ![book seat](images/Screenshot%202024-09-28%20113111.png)
 
+### Screenshot 6
+![book seat(if another one tries to book seat)](images/Screenshot%2024-09-28%121838.png)
 ### Screenshot 5
+
 ![my-bookings](images/Screenshot%202024-09-28%20113200.png)
