@@ -1,7 +1,7 @@
 const sequelize = require('../config/database');
 const { Booking, Train, User } = require('../models');
 
-// Seat booking logic
+
 exports.bookSeat = async (req, res) => {
   console.log('Book seat endpoint reached');
   const { trainId, seatNumber } = req.body;
@@ -34,7 +34,7 @@ exports.bookSeat = async (req, res) => {
   }
 };
 
-// Get booking details logic
+
 exports.getBookingDetails = async (req, res) => {
   const userId = req.user.id;
   console.log(`Fetching booking details for user ID: ${userId}`);
