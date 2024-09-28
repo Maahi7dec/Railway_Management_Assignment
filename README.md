@@ -33,7 +33,7 @@ This project is a **Railway Management System** built using Node.js, Express.js,
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/railway-management-system.git
+   git clone [https://github.com/Maahi7dec/Railway_Management_Assignment.git]
    ```
 
 2. Navigate to the project directory:
