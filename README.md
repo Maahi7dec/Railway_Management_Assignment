@@ -209,7 +209,7 @@ Here are some screenshots of the application:
 ![book seat](images/Screenshot%202024-09-28%20113111.png)
 
 ### Screenshot 6
-![book seat(if another one tries to book seat)](images/Screenshot%2024-09-28%121838.png)
-### Screenshot 5
+![book seat(if another one tries to book seat)](images/Screenshot%202024-09-28%20121838.png)
 
+### Screenshot 7
 ![my-bookings](images/Screenshot%202024-09-28%20113200.png)
