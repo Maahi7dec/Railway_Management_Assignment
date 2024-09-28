@@ -32,13 +32,13 @@ This project is a **Railway Management System** built using Node.js, Express.js,
 
 1. Clone the repository:
 
-   ```bash
-   git clone [https://github.com/Maahi7dec/Railway_Management_Assignment.git]
+   ```
+   git clone https://github.com/Maahi7dec/Railway_Management_Assignment.git
    ```
 
 2. Navigate to the project directory:
 
-   ```bash
+   ```
    cd railway-management-system
    ```
 
@@ -62,17 +62,35 @@ This project is a **Railway Management System** built using Node.js, Express.js,
 
 5. Run the application:
 
-   ```bash
+   ```
    npm run start
    ```
 
    Alternatively, for development with automatic restarts on file changes:
 
-   ```bash
+   ```
    npm run dev
    ```
 
 6. The API will be available at `http://localhost:3000`.
+
+Sequelize Setup with PostgreSQL
+To set up Sequelize with PostgreSQL for this project, follow the steps below.
+
+1. Install Sequelize and PostgreSQL Dependencies
+First, you need to install sequelize, pg, and pg-hstore in your project. These packages allow Sequelize to communicate with a PostgreSQL database.
+
+```
+npm install sequelize pg pg-hstore
+```
+2. Setup PostgreSQL Database
+Make sure you have PostgreSQL installed and running on your system. Create a database for your project by running the following command in your PostgreSQL shell:
+
+sql
+```
+CREATE DATABASE my_database_name;
+```
+Replace my_database_name with the name of your database.
 
 ## Project Structure
 
