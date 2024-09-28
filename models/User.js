@@ -2,7 +2,7 @@ const { DataTypes } = require('sequelize');
 const sequelize = require('../config/database');
 const bcrypt = require('bcrypt');
 
-// Define the User model
+
 const User = sequelize.define('User', {
   username: {
     type: DataTypes.STRING,
@@ -16,7 +16,7 @@ const User = sequelize.define('User', {
   role: {
     type: DataTypes.STRING,
     allowNull: false,
-    defaultValue: 'user' // Can be 'user' or 'admin'
+    defaultValue: 'user' 
   }
 }, {
   hooks: {
