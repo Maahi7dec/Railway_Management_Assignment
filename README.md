@@ -189,3 +189,24 @@ Admins can add new trains to the system by providing an API key.
 | userId      | Integer | Foreign key, references the `User` model|
 | trainId     | Integer | Foreign key, references the `Train` model|
 
+## Screenshots
+
+Here are some screenshots of the application:
+
+### Screenshot 1
+![Register](images/Screenshot%202024-09-28%20112758.png)
+
+### Screenshot 2
+![Login](images/Screenshot%202024-09-28%20112839.png)
+
+### Screenshot 3
+![Admin-add train](images/Screenshot%202024-09-28%20112920.png)
+
+### Screenshot 4
+![seat avail check](images/Screenshot%202024-09-28%20112958.png)
+
+### Screenshot 5
+![book seat](images/Screenshot%202024-09-28%20113111.png)
+
+### Screenshot 5
+![my-bookings](images/Screenshot%202024-09-28%20113200.png)
