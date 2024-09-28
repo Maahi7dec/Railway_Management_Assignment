@@ -1,6 +1,5 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../config/database');
-// Adjust path to your config
 
 const Booking = sequelize.define('Booking', {
   seat_number: {
