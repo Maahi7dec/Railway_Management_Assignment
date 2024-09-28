@@ -9,8 +9,27 @@ exports.bookSeat = async (req, res) => {
 
   const transaction = await sequelize.transaction();
   try {
-    const train = await Train.findOne({ where: { id: trainId }, lock: true, transaction });
+    // Lock the Train record for updates
+    const train = await Train.findOne({
+      where: { id: trainId },
+      lock: transaction.LOCK.UPDATE,
+      transaction
+    });
 
+    
+    const existingBooking = await Booking.findOne({
+      where: {
+        trainId,
+        seat_number: seatNumber,
+      },
+      transaction
+    });
+
+    if (existingBooking) {
+      return res.status(400).json({ message: 'Seat is already booked' });
+    }
+
+ 
     if (train.available_seats <= 0) {
       return res.status(400).json({ message: 'No available seats' });
     }
@@ -21,6 +40,7 @@ exports.bookSeat = async (req, res) => {
       trainId,
     }, { transaction });
 
+    
     train.available_seats -= 1;
     await train.save({ transaction });
 
@@ -28,13 +48,14 @@ exports.bookSeat = async (req, res) => {
     res.json({ message: 'Seat booked successfully', booking });
 
   } catch (error) {
-    console.error('Error while booking:, error');
+    console.error('Error while booking:', error);
     await transaction.rollback();
     res.status(500).json({ message: 'Error while booking', error });
   }
 };
 
 
+// Get booking details logic
 exports.getBookingDetails = async (req, res) => {
   const userId = req.user.id;
   console.log(`Fetching booking details for user ID: ${userId}`);
