@@ -11,7 +11,7 @@ const authMiddleware = (req, res, next) => {
     if (err) {
       return res.status(401).json({ message: 'Unauthorized' });
     }
-    req.user = { id: decoded.id }; // Attach user id to request
+    req.user = { id: decoded.id }; 
     next();
   });
 };
